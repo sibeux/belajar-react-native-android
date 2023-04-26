@@ -1,5 +1,6 @@
-import React, {Component} from 'react';
-import {Text, View} from 'react-native';
+import React, { Component } from 'react';
+import { Text, View } from 'react-native';
+import Basic from './Udemy/Basic';
 
 class App extends Component {
   constructor(props: {} | Readonly<{}>) {
@@ -8,45 +9,18 @@ class App extends Component {
   }
   render() {
     return (
-      <View style={{flex: 1}}>
-        <Text
-          style={{
-            fontSize: 30,
-            fontWeight: 'bold',
-            fontStyle: 'italic',
-            textAlign: 'center',
-            letterSpacing: 2,
-          }}>
-          <Text
-            style={{color: 'rgb(255,0,0)', textDecorationLine: 'line-through'}}>
-            Hello
-          </Text>
-          <Text style={{color: 'blue', textDecorationLine: 'underline'}}>
-            World
-          </Text>
-        </Text>
-
+      <View style={{ flex: 1 }}>
         <View
           style={{
-            // width: 50,
-            // height: 50,
-            flex: 0.5,
-            backgroundColor: 'cyan',
-            // marginLeft: 30,
-            // paddingTop: 5,
-            marginHorizontal: 20,
-            marginVertical: 30,
-            // paddingLeft: 10,
+            backgroundColor: 'orange',
+            paddingVertical: 20,
             justifyContent: 'center',
             alignItems: 'center',
-
-            flexDirection: 'column-reverse',
-            // flexDirection: 'row',
+            elevation: 8,
           }}>
-          <Text>{'sibe 1'}</Text>
-          <Text>{'sibe 2'}</Text>
-          <Text>{'sibe 3'}</Text>
-          <Text>{'sibe 4'}</Text>
+          <Text style={{ color: '#FFF', fontSize: 20, fontWeight: 'bold' }}>
+            Welcome
+          </Text>
         </View>
       </View>
     );
