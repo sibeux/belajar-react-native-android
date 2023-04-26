@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, View, StatusBar} from 'react-native';
+import { Text, View, StatusBar, Image } from 'react-native';
 import Basic from './Udemy/Basic';
 
 class App extends Component {
@@ -22,6 +22,18 @@ class App extends Component {
           <Text style={{ color: '#FFF', fontSize: 20, fontWeight: 'bold' }}>
             Welcome
           </Text>
+        </View>
+
+        <View
+          style={{
+            justifyContent: 'center',
+            alignItems: 'center',
+            marginTop: 20,
+          }}>
+          <Image
+            style={{ width: 300, height: 300 }}
+            source={require('./src/image/image1.jpeg')}
+          />
         </View>
       </View>
     );
