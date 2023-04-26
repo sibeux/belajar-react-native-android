@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, View, StatusBar, Image } from 'react-native';
+import { Text, View, StatusBar, Image, TouchableOpacity } from 'react-native';
 import Basic from './Udemy/Basic';
 
 class App extends Component {
@@ -28,13 +28,12 @@ class App extends Component {
           style={{
             justifyContent: 'center',
             alignItems: 'center',
+            backgroundColor: 'grey',
             marginTop: 20,
+            flexDirection: 'row',
           }}>
           <Image
-            style={{ width: 300, height: 300, backgroundColor: '#f57c00' }}
-            // image offline
-            // source={require('./src/image/image1.jpeg')}
-
+            style={{ width: 150, height: 150, backgroundColor: '#f57c00' }}
             // image online
             source={{
               uri: 'https://raw.githubusercontent.com/sibeux/license-sibeux/MyProgram/image1.jpeg',
@@ -42,13 +41,36 @@ class App extends Component {
             resizeMode="contain"
           />
 
-          <Image
-            style={{ width: 300, height: 300, backgroundColor: '#f57c00', marginTop: 10}}
-            // image offline
-            source={require('./src/image/image1.jpeg')}
-            resizeMode="cover"
-          />
+          <View style={{ width: 20, backgroundColor: '#000' }} />
+
+          <View>
+            <Image
+              style={{ width: 150, height: 150, backgroundColor: '#f57c00' }}
+              // image offline
+              source={require('./src/image/image1.jpeg')}
+              resizeMode="cover" // default
+            />
+          </View>
         </View>
+
+        <TouchableOpacity
+          style={{
+            width: 300,
+            backgroundColor: '#f57c00',
+            marginTop: 20,
+            paddingVertical: 10,
+            borderRadius: 40,
+            elevation: 4,
+            justifyContent: 'center',
+            alignItems: 'center',
+            marginLeft: 'auto',
+            marginRight: 'auto',
+          }}
+          onPress={() => console.log('hello')}>
+          <Text style={{ color: 'white', fontWeight: 'bold' }}>
+            Teks ini bisa diklik
+          </Text>
+        </TouchableOpacity>
       </View>
     );
   }
