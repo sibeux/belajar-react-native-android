@@ -31,7 +31,7 @@ class App extends Component {
             marginTop: 20,
           }}>
           <Image
-            style={{ width: 300, height: 300 }}
+            style={{ width: 300, height: 300, backgroundColor: '#f57c00' }}
             // image offline
             // source={require('./src/image/image1.jpeg')}
 
@@ -39,6 +39,14 @@ class App extends Component {
             source={{
               uri: 'https://raw.githubusercontent.com/sibeux/license-sibeux/MyProgram/image1.jpeg',
             }}
+            resizeMode="contain"
+          />
+
+          <Image
+            style={{ width: 300, height: 300, backgroundColor: '#f57c00', marginTop: 10}}
+            // image offline
+            source={require('./src/image/image1.jpeg')}
+            resizeMode="cover"
           />
         </View>
       </View>
