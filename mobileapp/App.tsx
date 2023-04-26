@@ -11,16 +11,20 @@ class App extends Component {
       <View>
         <Text
           style={{
-            color: 'rgb(255,0,0)',
             fontSize: 30,
             fontWeight: 'bold',
             fontStyle: 'italic',
             textAlign: 'center',
-            textDecorationLine: 'underline line-through',
-            letterSpacing: 2
+            letterSpacing: 2,
           }}>
           {' '}
-          Hello World{' '}
+          <Text
+            style={{color: 'rgb(255,0,0)', textDecorationLine: 'line-through'}}>
+            Hello
+          </Text>
+          <Text style={{color: 'blue', textDecorationLine: 'underline'}}>
+            World
+          </Text>{' '}
         </Text>
       </View>
     );
