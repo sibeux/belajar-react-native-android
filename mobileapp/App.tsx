@@ -2,10 +2,12 @@ import React, { Component } from 'react';
 import { Text, View, StatusBar, Image, TouchableOpacity } from 'react-native';
 import Basic from './Udemy/Basic';
 
-class App extends Component {
-  constructor(props: {} | Readonly<{}>) {
+class App extends Component<{}, { header: string }> {
+  constructor(props: any) {
     super(props);
-    this.state = {};
+    this.state = {
+      header: 'Shopeepay',
+    };
   }
   render() {
     return (
@@ -20,7 +22,7 @@ class App extends Component {
             elevation: 8,
           }}>
           <Text style={{ color: '#FFF', fontSize: 20, fontWeight: 'bold' }}>
-            Welcome
+            {this.state.header}
           </Text>
         </View>
 
