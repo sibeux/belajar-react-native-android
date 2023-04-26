@@ -32,7 +32,13 @@ class App extends Component {
           }}>
           <Image
             style={{ width: 300, height: 300 }}
-            source={require('./src/image/image1.jpeg')}
+            // image offline
+            // source={require('./src/image/image1.jpeg')}
+
+            // image online
+            source={{
+              uri: 'https://raw.githubusercontent.com/sibeux/license-sibeux/MyProgram/image1.jpeg',
+            }}
           />
         </View>
       </View>
